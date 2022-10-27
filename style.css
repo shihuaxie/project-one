@@ -1,0 +1,443 @@
+body{
+    margin:auto 0;
+    font-family: Arial;
+}
+li{
+    list-style: none;
+}
+.zone {
+    /*padding:30px 50px;*/
+    /*margin:40px 60px;*/
+    cursor:pointer;
+    /*display:inline-block;*/
+    color:#FFF;
+    font-size:12px;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
+.box:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+
+/*main-nav*/
+/*sticky这个class是让nav bar固定在页面，页面动他不动*/
+.sticky {
+    position: fixed;
+    top:0;
+    width:100%;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:120px;
+    list-style: none;
+    font-size: 12px;
+    margin:0;
+}
+/*这里的@media是为了解决当屏幕缩小时，main-nav的responsive*/
+@media only screen and (max-width:600px){
+    .main-nav{
+        font-size: 0.5em;
+        padding: 0;
+    }
+}
+
+.main-nav li{
+    list-style: none;
+    padding: 10px;
+}
+.push{
+    margin-left: auto;
+}
+a{
+    color: #f5f5f6;
+    text-decoration: none;
+}
+
+/*cover*/
+.cover-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height:500px; not responsive*/
+    /*50vh means 50% of the viewHeight*/
+    height: 100vh;
+}
+/*.cover{*/
+/*    width:100%;*/
+/*    z-index:-1;*/
+/*}*/
+/*.main {*/
+/*    width: 100%;*/
+/*    !*height: 455px;*!*/
+/*    margin-left: 220px;*/
+/*    margin-top: 10px;*/
+/*}*/
+/*.main{*/
+/*    height: 980px;*/
+/*}*/
+.focus {
+    position: relative;
+    width: 720px;
+    height: 455px;
+    background-color: white;
+    margin-top: 100px;
+    overflow: hidden;
+    /*z-index: -1;*/
+}
+.focus ul {
+    position: absolute;
+    height:455px;
+    /*ul的盒子宽度要足够大 比所有图片宽度总和大才能装下图片 使他们并排*/
+    width: 600%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    /*z-index: -1;*/
+}
+.focus ul li{
+    float: left;
+    /*z-index: -1;*/
+
+}
+.focus ul li img {
+    width: 720px;
+    height: 455px;
+}
+.arrow-l,
+.arrow-r {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    /*font-family: "icomoon";*/
+    font-size: 18px;
+    /*//提升按钮的层级，解决被ul覆盖的问题*/
+    z-index: 2;
+}
+.arrow-r {
+    right: 0;
+}
+
+.circle {
+    position: absolute;
+    bottom: 10px;
+    left: 256px;
+}
+
+.circle li {
+    float: left;
+    width: 15px;
+    height: 15px;
+    /*background-color: #fff;*/
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 50%;
+    /*鼠标经过显示小手*/
+    cursor: pointer;
+}
+.current{
+    background-color: #fff;
+}
+@media only screen and (max-width:1360px){
+    .cover{
+        width:100%;
+        z-index:-1;
+        height: 100vh;
+    }
+}
+
+/*projects*/
+.grid-wrapper{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+}
+.box>img{
+    width: 100%;
+}
+.box{
+    padding: 100px;
+    margin:20px;
+    background-color: #444;
+}
+
+/*about start*/
+.about{
+    display: grid;
+    height:752px;
+    width:100%;
+    background-color: pink;
+    grid-template-columns: repeat(3, auto);
+}
+.left-part{
+    background-color: red;
+}
+.mid-part {
+    background-color: black;
+}
+.right-part{
+    background-color: yellow;
+}
+
+/*resume start */
+.resume{
+    display: grid;
+    height:752px;
+    width:100%;
+    justify-content: center;
+    justify-items: center;
+    background-color: pink;
+
+}
+
+.theme{
+    /*position: flex;*/
+    /*align-items: center;*/
+    /*height: 113px;*/
+    width: 420px;
+    background-color: grey;
+    margin: 10px;
+}
+.title{
+    font-size:15px;
+    text-align: center;
+    /*line-height: 50px;*/
+}
+.resume-box{
+    display: grid;
+    grid-template-columns:repeat(2,auto);
+    gap: 50px;
+    background-color: #C655BE;
+    height: 650px;
+}
+.resume-holder{
+    background-color: red;
+    /*width: 300px;*/
+    /*height: 300px;*/
+    font-size: 12px;
+}
+
+.inner-holder{
+    border: 2px solid black;
+    text-align: center;
+}
+
+/*my skills*/
+.skills{
+    /*position: relative;*/
+    background-color: black;
+    height:752px;
+    width:100%;
+    justify-content: center;
+    justify-items: center;
+
+}
+.shortIntro{
+    font-size: 12px;
+    text-align: center;
+}
+.skills-holder{
+    display: grid;
+    align-items: center;
+    background-color:yellow;
+    height: 351px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns:repeat(2,auto);
+    grid-gap: 25px 25px;
+    height: 321px;
+    background-color: blue;
+}
+
+.eight-columns {
+    background-color: deeppink;
+}
+
+.bottom-container{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    background-color: lightpink;
+    height: 334px;
+}
+
+.extraSkills {
+    background-color: red;
+    text-align: center;
+}
+.personalBtn{
+    background-color: orange;
+    text-align: center;
+}
+
+/*contact start*/
+.contact{
+    background-color: black;
+    /*height:752px;*/
+    width:100%;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*grid-template-columns:repeat(3, auto) ;*/
+    /*gap: 15px;*/
+}
+.three-columns{
+    background-color: orange;
+    padding:30px 20px;
+    height: 150px;
+    text-align: center;
+}
+.inner-box{
+    background-color: #4096ee;
+    height: 120px;
+    border:1px solid black;
+}
+/*email*/
+.email-container{
+    display: flex;
+    /*height:528px;*/
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
+
+form{
+    width: 60%;
+    margin-top: 15px;
+}
+
+.input-group{
+    position: relative;
+    margin-bottom: 30px;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color:#fff;
+    background:transparent;
+    font-size: 15px;
+}
+label{
+    position: absolute;
+    height:100%;
+    left: 0;
+    top:0;
+    padding: 10px;
+    color:#fff;
+    cursor: text;
+    transition: 0.2s;
+}
+button{
+    padding: 10px 0;
+    color:#fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top:-30px;
+    font-size: 14px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns:repeat(2, auto) ;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+
+}
+/*footer*/
+footer{
+    text-align: center;
+    height: 120px;
+    line-height: 150px;
+}
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+/***********************************************************************
+ *  Green Background
+ **********************************************************************/
+.green{
+    background: #56B870; /* Old browsers */
+    background: -moz-linear-gradient(top, #56B870 0%, #a5c956 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#56B870), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
+    background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Red Background
+ **********************************************************************/
+.red{
+    background: #C655BE; /* Old browsers */
+    background: -moz-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C655BE), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* IE10+ */
+    background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Yellow Background
+ **********************************************************************/
+.yellow{
+    background: #F3AAAA; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+.blue{
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
